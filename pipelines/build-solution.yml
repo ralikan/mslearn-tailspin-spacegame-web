@@ -49,5 +49,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
-  artifactName: 'SpaceGame-Build'
+  inputs:
+    artifactName: 'SpaceGame-Build'
   condition: succeeded()
