@@ -42,7 +42,7 @@ steps:
     inputs:
       command: custom
       custom: 'pack'
-      arguments: '${{ parameters.packagesToPack }} --output $(Build.ArtifactStagingDirectory)/${{ parameters.buildConfiguration }}/nupkg --configuration ${{ parameters.buildConfiguration }} --no-build --verbosity normal'
+      arguments: '$(Build.SourcesDirectory)/Tailspin.SpaceGame.Web.sln --output $(Build.ArtifactStagingDirectory)/${{ parameters.buildConfiguration }}/nupkg --configuration ${{ parameters.buildConfiguration }} --no-build --verbosity normal'
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - ${{ parameters.buildConfiguration }}'
