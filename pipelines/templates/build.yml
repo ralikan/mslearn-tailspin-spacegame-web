@@ -38,7 +38,7 @@ steps:
     summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
 
 - task: DotNetCoreCLI@2
-    displayName: "dotnet pack"
+    displayName: 'dotnet pack'
     inputs:
       command: custom
       custom: 'pack'
