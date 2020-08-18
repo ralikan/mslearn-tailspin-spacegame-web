@@ -38,11 +38,11 @@ steps:
     summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
 
 - task: DotNetCoreCLI@2
-    displayName: 'dotnet pack'
-    inputs:
-      command: custom
-      custom: 'pack'
-      arguments: '$(Build.SourcesDirectory)/Tailspin.SpaceGame.Web.sln --output $(Build.ArtifactStagingDirectory)/${{ parameters.buildConfiguration }}/nupkg --configuration ${{ parameters.buildConfiguration }} --no-build --verbosity normal'
+  displayName: 'dotnet pack'
+  inputs:
+    command: custom
+    custom: 'pack'
+    arguments: '$(Build.SourcesDirectory)/Tailspin.SpaceGame.Web.sln --output $(Build.ArtifactStagingDirectory)/${{ parameters.buildConfiguration }}/nupkg --configuration ${{ parameters.buildConfiguration }} --no-build --verbosity normal'
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - ${{ parameters.buildConfiguration }}'
