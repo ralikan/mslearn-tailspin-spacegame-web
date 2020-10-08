@@ -4,6 +4,7 @@ trigger:
 pool:
   vmImage: 'MyAgentPool'
   demands:
+    - agent.name -equals MyLinuxAgent
     - npm
 
 variables:
